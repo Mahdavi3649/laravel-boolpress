@@ -5157,6 +5157,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   data: function data() {
@@ -41421,9 +41431,8 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
+  return _c("div", [
+    _c("header", [
       _c(
         "nav",
         {
@@ -41441,7 +41450,7 @@ var render = function () {
                   staticClass: "navbar-brand",
                   attrs: { to: { name: "home" } },
                 },
-                [_vm._v("\n                BoolPress\n            ")]
+                [_vm._v("\n                    BoolPress\n                ")]
               ),
               _vm._v(" "),
               _vm._m(0),
@@ -41470,7 +41479,7 @@ var render = function () {
                             [
                               _vm._v(
                                 _vm._s(item.route_text) +
-                                  "\n                        "
+                                  "\n                            "
                               ),
                             ]
                           ),
@@ -41489,11 +41498,12 @@ var render = function () {
           ),
         ]
       ),
-      _vm._v(" "),
-      _c("router-view"),
-    ],
-    1
-  )
+    ]),
+    _vm._v(" "),
+    _c("main", [_c("router-view")], 1),
+    _vm._v(" "),
+    _vm._m(1),
+  ])
 }
 var staticRenderFns = [
   function () {
@@ -41515,6 +41525,14 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("footer", { staticClass: "bg-dark text-white text-center p-3" }, [
+      _c("p", [_vm._v("©copyright 2022")]),
+    ])
   },
 ]
 render._withStripped = true
