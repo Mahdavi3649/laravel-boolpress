@@ -5196,6 +5196,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "About"
 });
@@ -5211,12 +5223,73 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Home"
+  name: "Home",
+  data: function data() {
+    return {
+      posts: ""
+    };
+  },
+  methods: {},
+  mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/posts").then(function (response) {
+      console.log(response);
+      var posts = response.data.data;
+      _this.posts = posts.slice(0, 4);
+    })["catch"](function (e) {
+      console.error(e);
+    });
+  }
 });
 
 /***/ }),
@@ -42474,13 +42547,7 @@ var render = function () {
   return _c("div", { staticClass: "page" }, [
     _c("div", { staticClass: "p-5 bg-dark text-white" }, [
       _c("div", { staticClass: "container" }, [
-        _c("h1", { staticClass: "display-3" }, [_vm._v("About me")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "lead" }, [
-          _vm._v(
-            "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Qui, minima.\n            "
-          ),
-        ]),
+        _vm._m(0),
         _vm._v(" "),
         _c("hr", { staticClass: "my-2" }),
         _vm._v(" "),
@@ -42504,10 +42571,33 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _vm._m(0),
+    _vm._m(1),
   ])
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex gap-5" }, [
+      _c("div", { staticClass: "avatar" }, [
+        _c("img", {
+          staticClass: "rounded-circle",
+          attrs: { src: "https://picsum.photos/200/200", alt: "" },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "jumbo_text" }, [
+        _c("h1", { staticClass: "display-3" }, [_vm._v("About me")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead" }, [
+          _vm._v(
+            "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing\n                        elit. Qui, minima.\n                    "
+          ),
+        ]),
+      ]),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -42544,9 +42634,78 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h3", [_vm._v("Homepage")])
+  return _c("div", { staticClass: "page" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("section", { staticClass: "recent_articles" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h2", { staticClass: "py-4" }, [_vm._v("Recent articles")]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row" },
+          _vm._l(_vm.posts, function (post) {
+            return _c("div", { key: post.id, staticClass: "col" }, [
+              _c("div", { staticClass: "card" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "storage/" + post.cover_image, alt: "" },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("p", [
+                    _vm._v(
+                      "\n                                " +
+                        _vm._s(post.content.slice(0, 100) + "...") +
+                        "\n                            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Read more")]),
+                ]),
+              ]),
+            ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "go_to_blog m-5 text-center" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary text-white",
+                attrs: { to: { name: "posts" } },
+              },
+              [_vm._v("Go to my blog")]
+            ),
+          ],
+          1
+        ),
+      ]),
+    ]),
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-5 bg-info text-black" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "display-3" }, [_vm._v("BoolPress Blog")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead" }, [
+          _vm._v(
+            "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                Accusamus, quod!\n            "
+          ),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 

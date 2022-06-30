@@ -2,11 +2,23 @@
     <div class="page">
         <div class="p-5 bg-dark text-white">
             <div class="container">
-                <h1 class="display-3">About me</h1>
-                <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Qui, minima.
-                </p>
+                <div class="d-flex gap-5">
+                    <div class="avatar">
+                        <img
+                            class="rounded-circle"
+                            src="https://picsum.photos/200/200"
+                            alt=""
+                        />
+                    </div>
+                    <div class="jumbo_text">
+                        <h1 class="display-3">About me</h1>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Qui, minima.
+                        </p>
+                    </div>
+                </div>
+
                 <hr class="my-2" />
                 <p>More info</p>
                 <p class="lead">
