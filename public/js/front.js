@@ -5202,12 +5202,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "About"
 });
@@ -5294,6 +5288,50 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/NotFound.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/NotFound.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "About"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Post.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Post.vue?vue&type=script&lang=js& ***!
@@ -5367,8 +5405,14 @@ __webpack_require__.r(__webpack_exports__);
 
     axios.get("/api/posts/" + this.$route.params.slug).then(function (response) {
       //console.log(response.data);
-      _this.post = response.data;
-      _this.loading = false;
+      if (response.data.status_code === 404) {
+        _this.$router.push({
+          name: "not-found"
+        });
+      } else {
+        _this.post = response.data;
+        _this.loading = false;
+      }
     })["catch"](function (e) {
       console.error(e);
     });
@@ -10811,6 +10855,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "aside .widget[data-v-42344b0c] {\n  padding: 16px;\n  border-radius: 16px;\n  margin: 10px;\n  background-color: rgb(189, 233, 145);\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "main[data-v-91ac6b5c] {\n  min-height: 100vh;\n}", ""]);
 
 // exports
 
@@ -42093,6 +42156,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--8-2!../../../node_modules/sass-loader/dist/cjs.js??ref--8-3!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -42708,7 +42801,7 @@ var render = function () {
             _c(
               "router-link",
               {
-                staticClass: "btn btn-primary btn-lg",
+                staticClass: "btn btn-primary btn-lg text-white",
                 attrs: { to: { name: "posts" } },
               },
               [_vm._v("Read my blog")]
@@ -42754,7 +42847,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "content py-4" }, [
         _c("p", [
           _vm._v(
-            "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Asperiores debitis quo omnis modi in repellat, itaque quod\n                consectetur at quaerat animi amet culpa aspernatur hic\n                error! Ipsam dolorem perspiciatis iusto, aperiam magni\n                facere, nulla exercitationem unde sed laboriosam quaerat\n                quia possimus dolores! Sint natus, enim, nemo veritatis\n                itaque ratione eum error labore amet laborum nulla sunt modi\n                possimus laboriosam quo fuga quas, dolorum molestiae\n                deleniti reprehenderit. Perferendis reiciendis eveniet\n                quidem blanditiis quasi, officiis quam ratione\n                necessitatibus modi soluta saepe, veritatis, doloribus\n                vitae! Dolore facilis explicabo commodi possimus, eos esse\n                eius molestiae cumque, sunt blanditiis, aliquid nisi vitae\n                accusamus quae vel repellat sapiente iste porro voluptas\n                mollitia minima asperiores. Repellendus rerum commodi fugit,\n                facere perspiciatis voluptates dolorum optio quod corporis\n                provident inventore voluptatum beatae, ad quidem nostrum qui\n                ex, laborum assumenda iste eum voluptate. Deserunt minus\n                ipsum neque assumenda? Aspernatur eos ipsam sed aperiam. Cum\n                aspernatur repellat doloremque possimus tenetur ullam\n                accusantium amet eos natus, nulla enim, autem vitae quidem\n                dolorum earum at rerum excepturi fugiat corporis dolor\n                quasi? Mollitia nemo, incidunt veritatis quisquam provident\n                necessitatibus eaque itaque cum ducimus! Voluptate, quasi\n                autem? Molestias omnis mollitia iste! Necessitatibus alias\n                sint incidunt nam numquam velit modi dicta illo. Obcaecati\n                animi facilis dolore dignissimos qui quaerat veritatis. Ipsa\n                placeat facere ab rerum, facilis debitis asperiores dolorem?\n                Dolorum rem nisi, fugiat deserunt atque labore, dicta ex\n                doloremque iste odio voluptas! Amet accusantium saepe, sint\n                rem, numquam consequuntur deleniti expedita accusamus cumque\n                est, voluptatum error repudiandae eum repellat quam\n                assumenda esse at iusto nam labore eaque reprehenderit?\n                Cupiditate nostrum ratione sunt aliquid, sint esse tempore\n                velit tempora cum fuga qui nemo iure quia amet ea laboriosam\n                officia. Voluptate deleniti quaerat quidem velit, ipsam\n                harum tenetur debitis, fugit cumque libero a consequatur\n                distinctio id magnam sapiente porro corporis aperiam veniam\n                eos consequuntur ipsum natus sed error saepe. Nostrum\n                blanditiis ipsum minus animi, exercitationem beatae dolores\n                quasi optio commodi explicabo voluptatem eaque aut corrupti\n                earum at? Odio tempore vero fugiat aspernatur nesciunt\n                aliquid aperiam illum voluptatum, quis animi repellat\n                exercitationem ad eos deserunt, temporibus, nisi qui minima?\n                Labore vero asperiores dolores perspiciatis, cumque dolorum\n                non magni nisi maiores ipsam laborum quas ad architecto\n                ullam quod, ab qui porro corporis natus soluta harum aperiam\n                quae nemo. Eligendi fugit error quibusdam ea expedita,\n                inventore sequi tempora quas ipsum sed esse totam atque,\n                dolore impedit velit pariatur? Dolor vitae consequatur\n                beatae illum ea enim eaque officiis voluptatum. Quas dolor\n                qui corporis dicta repellat assumenda reiciendis dolorum ex\n                fuga quia. Cupiditate perspiciatis, repellat explicabo\n                suscipit sunt ipsum asperiores iusto quisquam non aperiam.\n                Dolores magni quibusdam repellat perspiciatis suscipit totam\n                neque hic commodi quia fugit fugiat atque deserunt vero\n                ipsa, cupiditate, dolorem perferendis nostrum nesciunt a\n                architecto non nulla omnis animi? Ipsa beatae totam quia est\n                deleniti veritatis necessitatibus asperiores culpa\n                laudantium iusto repudiandae accusantium hic vero, placeat\n                porro dolores perspiciatis pariatur facilis ea? Maxime neque\n                provident alias sint distinctio magnam aliquam quisquam\n                commodi tempore, suscipit sapiente odio officia ratione quam\n                eaque. Dolore sapiente nam reiciendis atque quod labore\n                porro dolorem ratione!\n            "
+            "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Asperiores debitis quo omnis modi in repellat, itaque quod\n                consectetur at quaerat animi amet culpa aspernatur hic\n                error! Ipsam dolorem perspiciatis iusto, aperiam magni\n                facere, nulla exercitationem unde sed laboriosam quaerat\n                quia possimus dolores! Sint natus, enim, nemo veritatis\n                itaque ratione eum error labore amet laborum nulla sunt modi\n                possimus laboriosam quo fuga quas, dolorum molestiae\n                deleniti reprehenderit. Perferendis reiciendis eveniet\n                quidem blanditiis quasi, officiis quam ratione\n                necessitatibus modi soluta saepe, veritatis, doloribus\n                vitae! Dolore facilis explicabo commodi possimus, eos esse\n                eius molestiae cumque, sunt blanditiis, aliquid nisi vitae\n                accusamus quae vel repellat sapiente iste porro voluptas\n                mollitia minima asperiores. Repellendus rerum commodi fugit,\n                facere perspiciatis voluptates dolorum optio quod corporis\n                provident inventore voluptatum beatae, ad quidem nostrum qui\n                Voluptate, quasi autem? Molestias omnis mollitia iste!\n                Necessitatibus alias sint incidunt nam numquam velit modi\n                dicta illo. Obcaecati animi facilis dolore dignissimos qui\n                quaerat veritatis. Ipsa placeat facere ab rerum, facilis\n                debitis asperiores dolorem? Dolorum rem nisi, fugiat\n                deserunt atque labore, dicta ex doloremque iste odio\n                voluptas! Amet accusantium saepe, sint rem, numquam\n                consequuntur deleniti expedita accusamus cumque est,\n                voluptatum error repudiandae eum repellat quam assumenda\n                esse at iusto nam labore eaque reprehenderit? Cupiditate\n                nostrum ratione sunt aliquid, sint esse tempore velit\n                tempora cum fuga qui nemo iure quia amet ea laboriosam\n                officia. Voluptate deleniti quaerat quidem velit, ipsam\n                harum tenetur debitis, fugit cumque libero a consequatur\n                distinctio id magnam sapiente porro corporis aperiam veniam\n                eos consequuntur ipsum natus sed error saepe. Nostrum\n                blanditiis ipsum minus animi, exercitationem beatae dolores\n                quasi optio commodi explicabo voluptatem eaque aut corrupti\n                earum at? Odio tempore vero fugiat aspernatur nesciunt\n                aliquid aperiam illum voluptatum, quis animi repellat\n                exercitationem ad eos deserunt, temporibus, nisi qui minima?\n                Labore vero asperiores dolores perspiciatis, cumque dolorum\n                non magni nisi maiores ipsam laborum quas ad architecto\n                ullam quod, ab qui porro corporis natus soluta harum aperiam\n                quae nemo. Eligendi fugit error quibusdam ea expedita,\n                inventore sequi tempora quas ipsum sed esse totam atque,\n                dolore impedit velit pariatur? Dolor vitae consequatur\n                beatae illum ea enim eaque officiis voluptatum. Quas dolor\n                qui corporis dicta repellat assumenda reiciendis dolorum ex\n                fuga quia. Cupiditate perspiciatis, repellat explicabo\n                suscipit sunt ipsum asperiores iusto quisquam non aperiam.\n                Dolores magni quibusdam repellat perspiciatis suscipit totam\n                neque hic commodi quia fugit fugiat atque deserunt vero\n                ipsa, cupiditate, dolorem perferendis nostrum nesciunt a\n                architecto non nulla omnis animi? Ipsa beatae totam quia est\n                deleniti veritatis necessitatibus asperiores culpa\n                laudantium iusto repudiandae accusantium hic vero, placeat\n                porro dolores perspiciatis pariatur facilis ea? Maxime neque\n                provident alias sint distinctio magnam aliquam quisquam\n                commodi tempore, suscipit sapiente odio officia ratione quam\n                eaque. Dolore sapiente nam reiciendis atque quod labore\n                porro dolorem ratione!\n            "
           ),
         ]),
       ]),
@@ -42849,6 +42942,90 @@ var staticRenderFns = [
           _vm._v(
             "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                Accusamus, quod!\n            "
           ),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/NotFound.vue?vue&type=template&id=1c8dbf98&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/NotFound.vue?vue&type=template&id=1c8dbf98& ***!
+  \******************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "page" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container p-4" }, [
+      _vm._v(
+        "\n        The page you requested was not found, to to visit these pages\n        "
+      ),
+      _c("ul", [
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { name: "home" } } }, [
+              _vm._v("Home"),
+            ]),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { name: "about" } } }, [
+              _vm._v("About"),
+            ]),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { name: "posts" } } }, [
+              _vm._v("Posts"),
+            ]),
+          ],
+          1
+        ),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-5 bg-dark text-white" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "jumbo_text" }, [
+          _c("h1", { staticClass: "display-3" }, [
+            _vm._v("Page not found, 404"),
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "lead" }, [
+            _vm._v(
+              "\n                    Sorry, the page you requested does not exist\n                "
+            ),
+          ]),
         ]),
       ]),
     ])
@@ -43423,7 +43600,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("footer", { staticClass: "bg-dark text-white text-center p-3" }, [
-      _c("p", [_vm._v("©copyright 2022")]),
+      _c("p", [_vm._v("Copyright © 2022")]),
     ])
   },
 ]
@@ -58947,6 +59124,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/NotFound.vue":
+/*!*****************************************!*\
+  !*** ./resources/js/Pages/NotFound.vue ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NotFound_vue_vue_type_template_id_1c8dbf98___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NotFound.vue?vue&type=template&id=1c8dbf98& */ "./resources/js/Pages/NotFound.vue?vue&type=template&id=1c8dbf98&");
+/* harmony import */ var _NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NotFound.vue?vue&type=script&lang=js& */ "./resources/js/Pages/NotFound.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NotFound_vue_vue_type_template_id_1c8dbf98___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NotFound_vue_vue_type_template_id_1c8dbf98___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/NotFound.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/NotFound.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/Pages/NotFound.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./NotFound.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/NotFound.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/NotFound.vue?vue&type=template&id=1c8dbf98&":
+/*!************************************************************************!*\
+  !*** ./resources/js/Pages/NotFound.vue?vue&type=template&id=1c8dbf98& ***!
+  \************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_1c8dbf98___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./NotFound.vue?vue&type=template&id=1c8dbf98& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/NotFound.vue?vue&type=template&id=1c8dbf98&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_1c8dbf98___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_1c8dbf98___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Post.vue":
 /*!*************************************!*\
   !*** ./resources/js/Pages/Post.vue ***!
@@ -59288,12 +59534,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pages_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Pages/About */ "./resources/js/Pages/About.vue");
 /* harmony import */ var _Pages_Posts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Pages/Posts */ "./resources/js/Pages/Posts.vue");
 /* harmony import */ var _Pages_Post__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Pages/Post */ "./resources/js/Pages/Post.vue");
+/* harmony import */ var _Pages_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Pages/NotFound */ "./resources/js/Pages/NotFound.vue");
 // 0. If using a module system (e.g. via vue-cli), import Vue and VueRouter
 // and then call `Vue.use(VueRouter)`.
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]); // 1. Define route components.
 // These can be imported from other files
+
 
 
 
@@ -59320,6 +59568,10 @@ var routes = [{
   path: "/posts/:slug",
   name: 'post',
   component: _Pages_Post__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
+  path: "/*",
+  name: 'not-found',
+  component: _Pages_NotFound__WEBPACK_IMPORTED_MODULE_6__["default"]
 }]; // 3. Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
 // keep it simple for now.
@@ -59347,7 +59599,9 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App_vue_vue_type_template_id_91ac6b5c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=91ac6b5c&scoped=true& */ "./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&scoped=true&");
 /* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/views/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _App_vue_vue_type_style_index_0_id_91ac6b5c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true& */ "./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -59355,7 +59609,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _App_vue_vue_type_template_id_91ac6b5c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _App_vue_vue_type_template_id_91ac6b5c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -59384,6 +59638,22 @@ component.options.__file = "resources/js/views/App.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true& ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_91ac6b5c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--8-2!../../../node_modules/sass-loader/dist/cjs.js??ref--8-3!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=style&index=0&id=91ac6b5c&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_91ac6b5c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_91ac6b5c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_91ac6b5c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_91ac6b5c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
 
 /***/ }),
 

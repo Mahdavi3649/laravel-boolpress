@@ -23,7 +23,7 @@
                 <p>More info</p>
                 <p class="lead">
                     <router-link
-                        class="btn btn-primary btn-lg"
+                        class="btn btn-primary btn-lg text-white"
                         :to="{ name: 'posts' }"
                         >Read my blog</router-link
                     >
@@ -50,24 +50,18 @@
                     mollitia minima asperiores. Repellendus rerum commodi fugit,
                     facere perspiciatis voluptates dolorum optio quod corporis
                     provident inventore voluptatum beatae, ad quidem nostrum qui
-                    ex, laborum assumenda iste eum voluptate. Deserunt minus
-                    ipsum neque assumenda? Aspernatur eos ipsam sed aperiam. Cum
-                    aspernatur repellat doloremque possimus tenetur ullam
-                    accusantium amet eos natus, nulla enim, autem vitae quidem
-                    dolorum earum at rerum excepturi fugiat corporis dolor
-                    quasi? Mollitia nemo, incidunt veritatis quisquam provident
-                    necessitatibus eaque itaque cum ducimus! Voluptate, quasi
-                    autem? Molestias omnis mollitia iste! Necessitatibus alias
-                    sint incidunt nam numquam velit modi dicta illo. Obcaecati
-                    animi facilis dolore dignissimos qui quaerat veritatis. Ipsa
-                    placeat facere ab rerum, facilis debitis asperiores dolorem?
-                    Dolorum rem nisi, fugiat deserunt atque labore, dicta ex
-                    doloremque iste odio voluptas! Amet accusantium saepe, sint
-                    rem, numquam consequuntur deleniti expedita accusamus cumque
-                    est, voluptatum error repudiandae eum repellat quam
-                    assumenda esse at iusto nam labore eaque reprehenderit?
-                    Cupiditate nostrum ratione sunt aliquid, sint esse tempore
-                    velit tempora cum fuga qui nemo iure quia amet ea laboriosam
+                    Voluptate, quasi autem? Molestias omnis mollitia iste!
+                    Necessitatibus alias sint incidunt nam numquam velit modi
+                    dicta illo. Obcaecati animi facilis dolore dignissimos qui
+                    quaerat veritatis. Ipsa placeat facere ab rerum, facilis
+                    debitis asperiores dolorem? Dolorum rem nisi, fugiat
+                    deserunt atque labore, dicta ex doloremque iste odio
+                    voluptas! Amet accusantium saepe, sint rem, numquam
+                    consequuntur deleniti expedita accusamus cumque est,
+                    voluptatum error repudiandae eum repellat quam assumenda
+                    esse at iusto nam labore eaque reprehenderit? Cupiditate
+                    nostrum ratione sunt aliquid, sint esse tempore velit
+                    tempora cum fuga qui nemo iure quia amet ea laboriosam
                     officia. Voluptate deleniti quaerat quidem velit, ipsam
                     harum tenetur debitis, fugit cumque libero a consequatur
                     distinctio id magnam sapiente porro corporis aperiam veniam

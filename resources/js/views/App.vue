@@ -58,7 +58,7 @@
         </main>
 
         <footer class="bg-dark text-white text-center p-3">
-            <p>&copy;copyright 2022</p>
+            <p>Copyright &copy; 2022</p>
         </footer>
     </div>
 </template>
@@ -87,4 +87,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+main {
+    min-height: 100vh;
+}
+</style>
