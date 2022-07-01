@@ -15,10 +15,8 @@ use App\Models\Post;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('contact-form', function (Request $request) {
-  ddd($request->all());
-    
-});
+Route::get('contact-form', 'MessageController@index')->name('contact.form.index');
+Route::post('contact-form', 'MessageController@store');
 Auth::routes();
 
 
@@ -38,6 +36,9 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->
     Route::resource('tags', 'TagController')->parameters([
         'tags' => 'tag:slug'
     ])->except('show','create','edit');
+
+    Route::resource('messages','MessageController');
+
 });
 
 
