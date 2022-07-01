@@ -79,7 +79,7 @@ export default {
                 },
                 {
                     route_name: "posts",
-                    route_text: "Posts",
+                    route_text: "Blog",
                 },
             ],
         };

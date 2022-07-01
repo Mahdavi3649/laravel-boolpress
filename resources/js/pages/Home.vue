@@ -25,7 +25,7 @@
                                 <p>
                                     {{ post.content.slice(0, 100) + "..." }}
                                 </p>
-                                <a href="#">Read more</a>
+                                <a href="#">Read more...</a>
                             </div>
                         </div>
                     </div>
